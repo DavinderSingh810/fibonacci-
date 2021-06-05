@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int fibonacci(int); // function declaration
+int main()
+{
+    int n;
+    printf("\n enter the number of elements you wish to print: ");
+    scanf("%d", &n);
+    printf("\n0 1");
+    fibonacci(n - 2); //function calling
+}
+int fibonacci(int n) //function defining
+{
+    static int a = 0,  b= 1;
+    static c;           //the next element
+    if (n > 0)
+    {
+        c = a + b;b
+        a = b;    //swapping places of elements to get the last element on the place of the precedding one
+        b = c; //same as above
+        printf(" %d", c);
+        fibonacci(n - 1);
+    }
+}
